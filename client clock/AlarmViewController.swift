@@ -1,20 +1,21 @@
 //
-//  ViewController.swift
+//  TableViewController2.swift
 //  client clock
 //
-//  Created by EDUARDO MENDOZA on 1/23/20.
+//  Created by EDUARDO MENDOZA on 1/24/20.
 //  Copyright © 2020 EDUARDO MENDOZA. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlarmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+       
     }
 
+    
 
 }
-
