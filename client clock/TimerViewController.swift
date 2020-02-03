@@ -9,7 +9,10 @@
 import UIKit
 
 class TimerViewController: UIViewController {
-
+    @IBOutlet weak var pickerViewSeconds: UIPickerView!
+    @IBOutlet weak var pickerViewMinutes: UIPickerView!
+    @IBOutlet weak var pickerViewHours: UIPickerView!
+    
      override func viewDidLoad() {
             super.viewDidLoad()
 

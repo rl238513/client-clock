@@ -86,6 +86,11 @@
                         <viewLayoutGuide key="safeArea" id="fRl-2x-0FG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="2zt-zb-0eU"/>
+                    <connections>
+                        <outlet property="pickerViewHours" destination="5Lj-yu-jBd" id="CaT-oe-LpT"/>
+                        <outlet property="pickerViewMinutes" destination="OQ5-fa-Zcr" id="Rrh-FW-Ro4"/>
+                        <outlet property="pickerViewSeconds" destination="x5s-vj-ITF" id="aRZ-mu-49Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wt-XD-2ur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
