@@ -47,10 +47,6 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         var timeLeft = seconds
         return timeLeft
     }
-    func timerCountDown() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: (#selector(ViewController.timerLoop)), userInfo: nil, repeats: true)
-        
-    }
     func numberOfComponents(in pickerViewTimer: UIPickerView) -> Int {
         return 3
         }
