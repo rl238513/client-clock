@@ -7,22 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--World Clock-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="WorldClockViewController" customModule="client_clock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="World Clock" image="globe" catalog="system" id="u83-4U-Qhg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1339" y="858"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vca-Y9-TOn">
             <objects>
@@ -34,32 +18,12 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="JPC-xf-eSH"/>
-                        <segue destination="0Tv-tq-ueI" kind="relationship" relationship="viewControllers" id="1Hx-n1-mO5"/>
-                        <segue destination="xaP-sJ-FvF" kind="relationship" relationship="viewControllers" id="W9b-Om-QT2"/>
-                        <segue destination="u1L-4M-dr1" kind="relationship" relationship="viewControllers" id="vOo-7X-bJ5"/>
                         <segue destination="YCN-IQ-LUA" kind="relationship" relationship="viewControllers" id="FUe-la-zo8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQV-Wp-juI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
-        </scene>
-        <!--Stopwatch-->
-        <scene sceneID="J0S-Rb-0X2">
-            <objects>
-                <viewController id="u1L-4M-dr1" customClass="StopwatchViewController" customModule="client_clock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dkf-CN-PO7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="1SL-CD-Ao2"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Stopwatch" image="stopwatch" catalog="system" id="8jL-Q5-il5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4PR-9T-rfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="903" y="858"/>
         </scene>
         <!--Timer-->
         <scene sceneID="cvX-5c-Z0l">
@@ -70,70 +34,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQ5-fa-Zcr">
-                                <rect key="frame" x="133" y="340" width="132" height="216"/>
+                                <rect key="frame" x="20" y="74" width="374" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YCN-IQ-LUA" id="0sg-cW-H3N"/>
+                                    <outlet property="delegate" destination="YCN-IQ-LUA" id="nJp-BG-OcE"/>
+                                </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-vj-ITF">
-                                <rect key="frame" x="273" y="340" width="141" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lj-yu-jBd">
-                                <rect key="frame" x="0.0" y="340" width="125" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dw-O5-vuF">
+                                <rect key="frame" x="79" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancelTimer:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="Yxf-Km-uJS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHu-A1-uiI">
+                                <rect key="frame" x="273" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="Ncc-Fv-w02"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DAX-Qp-xk4">
+                                <rect key="frame" x="20" y="526" width="374" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-Mv-cbG">
+                                <rect key="frame" x="20" y="775" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="historyView:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="wZU-3w-yz8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fRl-2x-0FG"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="timer" catalog="system" id="2zt-zb-0eU"/>
                     <connections>
-                        <outlet property="pickerViewHours" destination="5Lj-yu-jBd" id="CaT-oe-LpT"/>
-                        <outlet property="pickerViewMinutes" destination="OQ5-fa-Zcr" id="Rrh-FW-Ro4"/>
-                        <outlet property="pickerViewSeconds" destination="x5s-vj-ITF" id="aRZ-mu-49Y"/>
+                        <outlet property="pickerViewTimer" destination="OQ5-fa-Zcr" id="EpK-BQ-AKh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wt-XD-2ur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676.8115942028987" y="857.8125"/>
         </scene>
-        <!--Alarm-->
-        <scene sceneID="H2g-e7-tjT">
-            <objects>
-                <viewController id="0Tv-tq-ueI" customClass="AlarmViewController" customModule="client_clock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Apf-Os-mCS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="EWL-vS-z8k"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Alarm" image="alarm" catalog="system" id="jTz-vs-6za"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SXS-BS-VKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-612" y="858"/>
-        </scene>
-        <!--Bedtime-->
-        <scene sceneID="uP9-oC-Iln">
-            <objects>
-                <viewController id="xaP-sJ-FvF" customClass="BedtimeViewController" customModule="client_clock" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gu4-ba-nff">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="5Ic-DL-sbF"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Bedtime" image="bed.double" catalog="system" id="N61-Lm-hC1"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7k-RB-Bsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138" y="858"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="alarm" catalog="system" width="62" height="64"/>
-        <image name="bed.double" catalog="system" width="64" height="40"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
-        <image name="stopwatch" catalog="system" width="60" height="64"/>
         <image name="timer" catalog="system" width="64" height="60"/>
     </resources>
 </document>
