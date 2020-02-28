@@ -33,7 +33,6 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     
-    
     func timerLoop(seconds: Int, mins: Int, hours: Int) -> Int {
         second -= 1
         if mins > 0 && seconds == 0 {
