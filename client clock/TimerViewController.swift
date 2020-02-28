@@ -14,6 +14,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var hour:Int = 0
     var minute:Int = 0
     var second:Int = 0
+    var test = 1
     
      override func viewDidLoad() {
             super.viewDidLoad()
