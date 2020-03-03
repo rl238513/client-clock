@@ -42,17 +42,17 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dw-O5-vuF">
-                                <rect key="frame" x="79" y="433" width="46" height="30"/>
+                                <rect key="frame" x="80" y="433" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="cancel"/>
                                 <connections>
                                     <action selector="cancelTimer:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="Yxf-Km-uJS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHu-A1-uiI">
-                                <rect key="frame" x="273" y="433" width="46" height="30"/>
+                                <rect key="frame" x="280" y="433" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="start"/>
                                 <connections>
                                     <action selector="startTimer:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="Ncc-Fv-w02"/>
                                 </connections>
@@ -65,7 +65,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-Mv-cbG">
                                 <rect key="frame" x="20" y="775" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="history"/>
                                 <connections>
                                     <action selector="historyView:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="wZU-3w-yz8"/>
                                 </connections>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wt-XD-2ur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676.8115942028987" y="857.8125"/>
+            <point key="canvasLocation" x="138" y="853"/>
         </scene>
     </scenes>
     <resources>
