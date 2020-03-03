@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "77A834E8-E8D9-4CAC-AFE4-F807C01B2F9B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "client clock/TimerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "startTimer(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0C781872-A1AF-4E89-9EDD-58B1D067F8C3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -46,9 +30,9 @@
             filePath = "client clock/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "timerLoop(seconds:mins:hours:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "restart()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,9 +46,9 @@
             filePath = "client clock/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "tickRate()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "timerStatus()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +62,9 @@
             filePath = "client clock/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "timerLoop(seconds:mins:hours:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "restart()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +78,9 @@
             filePath = "client clock/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "timerLoop(seconds:mins:hours:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "restart()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,9 +94,9 @@
             filePath = "client clock/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "timerLoop(seconds:mins:hours:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "timerStatus()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,9 +110,9 @@
             filePath = "client clock/TimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "timerLoop(seconds:mins:hours:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "timerStatus()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

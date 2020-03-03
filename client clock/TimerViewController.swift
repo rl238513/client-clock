@@ -10,10 +10,26 @@ import UIKit
 
 class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var hourDisplay: UILabel!
+    @IBOutlet weak var minuteDisplay: UILabel!
+    @IBOutlet weak var secondsDisplay: UILabel!
     @IBOutlet weak var pickerViewTimer: UIPickerView!
-    var hour:Int = 0
-    var minute:Int = 0
-    var second:Int = 0
+    
+    var hour:Int = 0 {
+        didSet {
+            hourDisplay.text = "\(hour)"
+        }
+    }
+    var minute:Int = 0 {
+           didSet {
+               minuteDisplay.text = "\(minute)"
+           }
+       }
+    var second:Int = 0 {
+           didSet {
+               secondsDisplay.text = "\(second)"
+           }
+       }
     var timerOn = true
     
     var timer = Timer()
@@ -32,12 +48,12 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     @IBAction func historyView(_ sender: Any) {
     }
-    func restart {
+    func restart() {
         hour = 0
         minute = 0
         second = 0
     }
-    func timerStatus {
+    func timerStatus() {
         if timerOn == false {
             timerOn = true
         }else {
