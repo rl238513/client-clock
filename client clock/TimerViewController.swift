@@ -31,15 +31,13 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         }
     }
     var timerOn = true
-    
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         pickerViewTimer.delegate = self
-        
     }
+    
     @IBAction func startTimer(_ sender: Any) {
         timerStatus()
     }
@@ -58,6 +56,9 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             hour -= 1
             minute = 59
         }
+        if {
+            ...
+        }
     }
     func tickRate() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: (#selector(TimerViewController.tick)), userInfo: nil, repeats: true)
@@ -69,14 +70,13 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         hour = 0
         minute = 0
         second = 0
+        timer.invalidate()
     }
     func timerStatus() {
         if second > 0 || minute > 0 || hour > 0{
             tickRate()
-        }else {
-            if second == 0 && minute == 0 && hour == 0 {
-                restart()
-            }
+        }else{
+            restart()
         }
     }
     func numberOfComponents(in pickerViewTimer: UIPickerView) -> Int {
@@ -120,6 +120,4 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             break;
         }
     }
-    
-    
 }
