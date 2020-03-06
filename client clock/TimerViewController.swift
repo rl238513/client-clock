@@ -14,6 +14,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var minuteDisplay: UILabel!
     @IBOutlet weak var secondsDisplay: UILabel!
     @IBOutlet weak var pickerViewTimer: UIPickerView!
+    @IBOutlet weak var startTimerButton: UIButton!
     
     var hour:Int = 0 {
         didSet {
@@ -30,7 +31,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             secondsDisplay.text = "\(second)"
         }
     }
-    var timerOn = true
+    var timerOn = false
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -39,12 +40,26 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     @IBAction func startTimer(_ sender: Any) {
-        timerStatus()
+        if timerOn == false {
+            timerOn = true
+            timerStatus()
+        }else
+        {
+            timerOn = false
+            timer.invalidate()
+            startTimerButton.titleLabel?.text = "start"
+        }
     }
     @IBAction func cancelTimer(_ sender: Any) {
         restart()
     }
     @IBAction func historyView(_ sender: Any) {
+    }
+    func restart() {
+        hour = 0
+        minute = 0
+        second = 0
+        timer.invalidate()
     }
     func timerLoop(seconds: Int, mins: Int, hours: Int) {
         second -= 1
@@ -56,8 +71,8 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             hour -= 1
             minute = 59
         }
-        if {
-            ...
+        if hours == 0 && mins == 0 && seconds == 0 {
+            restart()
         }
     }
     func tickRate() {
@@ -66,14 +81,9 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @objc func tick() {
         timerLoop(seconds: second, mins: minute, hours: hour)
     }
-    func restart() {
-        hour = 0
-        minute = 0
-        second = 0
-        timer.invalidate()
-    }
     func timerStatus() {
         if second > 0 || minute > 0 || hour > 0{
+            startTimerButton.titleLabel?.text = "pause"
             tickRate()
         }else{
             restart()
@@ -82,7 +92,6 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func numberOfComponents(in pickerViewTimer: UIPickerView) -> Int {
         return 3
     }
-    
     func pickerView(_ pickerViewTimer: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         switch component {

@@ -122,6 +122,7 @@
                         <outlet property="minuteDisplay" destination="SVw-ba-Zxy" id="FZU-tU-th0"/>
                         <outlet property="pickerViewTimer" destination="OQ5-fa-Zcr" id="EpK-BQ-AKh"/>
                         <outlet property="secondsDisplay" destination="HRo-dv-tYX" id="qmZ-Bp-O9p"/>
+                        <outlet property="startTimerButton" destination="SHu-A1-uiI" id="Y8d-cA-K9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wt-XD-2ur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
