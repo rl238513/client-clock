@@ -42,12 +42,15 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBAction func startTimer(_ sender: Any) {
         if timerOn == false {
             timerOn = true
+            startTimerButton.setTitle("pause", for: .normal)
             timerStatus()
+             performSegue(withIdentifier: "segueToHistory", sender: nil)
         }else
         {
             timerOn = false
             timer.invalidate()
-            startTimerButton.titleLabel?.text = "start"
+            startTimerButton.setTitle("start", for: .normal)
+             performSegue(withIdentifier: "segueToHistory", sender: nil)
         }
     }
     @IBAction func cancelTimer(_ sender: Any) {
@@ -83,7 +86,6 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     func timerStatus() {
         if second > 0 || minute > 0 || hour > 0{
-            startTimerButton.titleLabel?.text = "pause"
             tickRate()
         }else{
             restart()

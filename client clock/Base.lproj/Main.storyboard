@@ -19,11 +19,41 @@
                     </tabBar>
                     <connections>
                         <segue destination="YCN-IQ-LUA" kind="relationship" relationship="viewControllers" id="FUe-la-zo8"/>
+                        <segue destination="UBN-mb-QiC" kind="relationship" relationship="viewControllers" id="Mgn-ZT-HkX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQV-Wp-juI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+        <!--history-->
+        <scene sceneID="aWh-zQ-pBz">
+            <objects>
+                <tableViewController id="UBN-mb-QiC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cgq-kc-LET">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cxD-4k-d7c">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxD-4k-d7c" id="yoQ-Pl-fxc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UBN-mb-QiC" id="Oe9-Ph-LUJ"/>
+                            <outlet property="delegate" destination="UBN-mb-QiC" id="3U7-f3-xBH"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="history" image="arrow.counterclockwise" catalog="system" selectedImage="arrow.counterclockwise" id="zPL-pv-gCn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBW-yp-pQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="852"/>
         </scene>
         <!--Timer-->
         <scene sceneID="cvX-5c-Z0l">
@@ -50,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHu-A1-uiI">
-                                <rect key="frame" x="280" y="433" width="32" height="30"/>
+                                <rect key="frame" x="238" y="433" width="109" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="start"/>
                                 <connections>
@@ -62,14 +92,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-Mv-cbG">
-                                <rect key="frame" x="20" y="775" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="history"/>
-                                <connections>
-                                    <action selector="historyView:" destination="YCN-IQ-LUA" eventType="touchUpInside" id="wZU-3w-yz8"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sn-Hm-l1Q">
                                 <rect key="frame" x="20" y="298" width="374" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -123,6 +145,7 @@
                         <outlet property="pickerViewTimer" destination="OQ5-fa-Zcr" id="EpK-BQ-AKh"/>
                         <outlet property="secondsDisplay" destination="HRo-dv-tYX" id="qmZ-Bp-O9p"/>
                         <outlet property="startTimerButton" destination="SHu-A1-uiI" id="Y8d-cA-K9s"/>
+                        <segue destination="UBN-mb-QiC" kind="modal" identifier="segueToHistory" id="D04-cZ-HTA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wt-XD-2ur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,6 +154,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="56" height="64"/>
         <image name="timer" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="D04-cZ-HTA"/>
+    </inferredMetricsTieBreakers>
 </document>
